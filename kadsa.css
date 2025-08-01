@@ -66,15 +66,14 @@ footer p {
     cursor: pointer;
     padding: 10px;
     background: none;
-    color: transparent;
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
 }
 
 .image-box img {
     width: auto;
-    height: 400px;
+    height: 350px;
     object-fit: cover;
     margin: 0 10px;
     border-radius: 10px;
