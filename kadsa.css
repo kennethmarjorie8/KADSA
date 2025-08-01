@@ -1,82 +1,86 @@
-body {
-    background-color: #5c1f1f;
-    color: white;
-    padding: 0;
-    margin: 0;
-    font-family: "Times New Roman", sans-serif;
-}
+@media (max-width: 600px) {
+    body {
+        background-color: #5c1f1f;
+        color: white;
+        padding: 0;
+        margin: 0;
+        font-family: "Times New Roman", sans-serif;
+    }
 
-main {
-    background-color: #a73232;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    width: 390px;
-    text-align: center;
-    margin: 10px;
-    border-radius: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
-    box-shadow: 0px 5px 8px 8px rgba(0, 0, 0, 0.3);
-}
+    main {
+        background-color: #a73232;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+        margin: 10px;
+        border-radius: 15px;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-shadow: 0px 5px 8px 8px rgba(0, 0, 0, 0.3);
+    }
 
-#kadsa-logo {
-    border-radius: 100px;
-    box-shadow: 0px 1px 8px 8px rgba(0, 0, 0, 0.3);
+    #kadsa-logo {
+        border-radius: 100px;
+        box-shadow: 0px 1px 8px 8px rgba(0, 0, 0, 0.3);
 
-}
+    }
 
-.main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-.earing1 img {
-    width: 280px;
-    border-radius: 15px;
-    height: auto;
-    box-shadow: 0px 5px 8px 8px rgba(0, 0, 0, 0.3);
+    .earing1 img {
+        width: 100%;
+        max-width: 280px;
+        border-radius: 15px;
+        height: auto;
+        box-shadow: 0px 5px 8px 8px rgba(0, 0, 0, 0.3);
 
-}
+    }
 
-#h3 {
-    text-decoration: underline;
-}
+    #h3 {
+        text-decoration: underline;
+    }
 
-footer img {
-    width: 50px;
-    border-radius: 13px;
-}
+    footer img {
+        width: 50px;
+        border-radius: 13px;
+    }
 
-footer p {
-    font-size: 12px;
-}
+    footer p {
+        font-size: 12px;
+    }
 
-.slider-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    border-radius: 10px;
-}
+    .slider-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        border-radius: 10px;
+    }
 
-.arrow {
-    border: none;
-    font-size: 28px;
-    cursor: pointer;
-    padding: 10px;
-    background: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    .arrow {
+        border: none;
+        font-size: 28px;
+        cursor: pointer;
+        padding: 10px;
+        background: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
 
-}
+    }
 
-.image-box img {
-    width: auto;
-    height: 350px;
-    object-fit: cover;
-    margin: 0 10px;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-    border-radius: 15px;
+    .image-box img {
+        width: auto;
+        height: 350px;
+        object-fit: cover;
+        margin: 0 10px;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+        border-radius: 15px;
+    }
 }
