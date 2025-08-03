@@ -82,13 +82,15 @@
 
                     <h3 id="h3">Collares</h3><br>
                     <div class="earing2">
-                        <img src="./kadsa/earing6.jpg" alt="earing6">
+                        <img src="./kadsa/earing6.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Earing6">
                         <p>¡Collar dorado con dije de flor brillante, delicado y encantador, ideal para resaltar tu lado
                             femenino!</p><br><br>
-                        <img src="./kadsa/earing11.jpg" alt="earing11">
+
+                        <img src="./kadsa/earing11.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Earing11">
                         <p>¡Estrellas de colores y lunas doradas se unen para iluminar tu estilo con magia y elegancia!
                         </p><br><br>
-                        <img src="./kadsa/earing16.jpg" alt="earing16">
+
+                        <img src="./kadsa/earing16.jpg" class="thumbnail" onclick="openModal(this.src)" alt="earing16">
                         <p>¡Delicadeza y estilo en uno! Este collar dorado florece elegancia!</p>
                     </div><br>
 
@@ -96,12 +98,14 @@
 
                     <h3 id="h3">Collares y Aritos</h3><br><br>
                     <div class="earing3">
-                        <img src="./kadsa/earing7.jpg" alt="earing7">
+                        <img src="./kadsa/earing7.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Earing7">
                         <p>¡Dale un toque de brillo a tu día con estos delicados aretes de corazón dorado!</p><br><br>
-                        <img src="./kadsa/earing8.jpg" alt="earing8">
+
+                        <img src="./kadsa/earing8.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Earing8">
                         <p>¡Set de joyería dorada con dijes en forma de flor brillantes, ideal para lucir elegante y
                             radiante!</p><br><br>
-                        <img src="./kadsa/earing17.jpg" alt="earing17">
+
+                        <img src="./kadsa/earing17.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Earing17">
                         <p>¡Brilla con elegancia! Este set de joyería floral en oro con diamantes cautiva con su
                             delicada belleza, ideal para cualquier ocasión especial.</p>
                     </div><br><br>
@@ -110,13 +114,20 @@
 
                     <h3 id="h3">Pulseras</h3><br>
                     <div class="earing4">
-                        <img src="./kadsa/earing14.jpg" alt="earing14">
+                        <img src="./kadsa/earing14.jpg" class="thumbnail" onclick="openModal(this.src)" alt="Earing14">
                         <p>¡Destaca tu brillo con esta pulsera dorada elegante y radiante!</p><br><br>
-                        <img src="./kadsa/earing15.jpg" alt="earing15">
+                        <img src="./kadsa/earing15.jpg" class="thumbnail" onclick="openModal(this.src)" alt="earing15">
                         <p>¡Elegancia en cada detalle! Esta pulsera dorada es puro lujo.</p>
                     </div>
                 </div>
             </div>
+
+            <div id="modal" class="modal" onclick="closeModal()">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modal-img">
+            </div>
+
+
 
             <div class="slider-container">
                 <button class="arrow left" onclick="prevImage()">&#8592;</button>
@@ -127,14 +138,6 @@
 
                 <button class="arrow right" onclick="nextImage()">&#8594;</button>
             </div>
-
-
-
-            <div id="modal" class="modal" onclick="closeModal()">
-                <span class="close">&times;</span>
-                <img class="modal-content" id="modal-img">
-            </div>
-
 
 
 
