@@ -54,8 +54,16 @@
         border-radius: 13px;
     }
 
-    footer p {
-        font-size: 12px;
+    .footer {
+        font-size: 13px;
+    }
+
+    .earings p {
+        font-size: 16px;
+    }
+
+    .about p {
+        font-size: 16px;
     }
 
     /* ________________________________________________________  */
@@ -90,6 +98,7 @@
 }
 
 /* ___________________________________________________________  */
+/* displaying the picture once it's tapped */
 .thumbnail {
     width: 150px;
     height: auto;
