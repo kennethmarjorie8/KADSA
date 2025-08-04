@@ -15,7 +15,7 @@ function prevImage() {
   showImage();
 }
 
-___________________________________________________________________
+/* ___________________________________________________________________ */
 function openModal(src) {
   const modal = document.getElementById('modal');
   const modalImg = document.getElementById('modal-img');
