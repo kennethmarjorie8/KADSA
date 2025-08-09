@@ -55,7 +55,8 @@
     #h3 {
         text-decoration: underline;
     }
-
+    /* ___________________________________________________________________________ */
+    /* FOOTER */
     footer img {
         width: 50px;
         max-width: 100%;
@@ -103,7 +104,7 @@
         transition: transform 0.3s ease;
         border-radius: 15px;
     }
-} */
+ */
 
     /* ___________________________________________________________  */
     /* displaying the picture once it's tapped */
@@ -150,3 +151,18 @@
         font-weight: bold;
         cursor: pointer;
     }
+
+   /*  ______________________________________________________________ */
+   .new1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+    flex-direction: row-reverse;
+   }
+
+   .new1 img {
+    margin-left: 20px;
+    box-shadow: 0px 5px 8px 8px rgba(0, 0, 0, 0.3);
+   }
+}   
