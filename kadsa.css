@@ -50,6 +50,7 @@
         width: 50px;
         max-width: 100%;
         border-radius: 13px;
+        cursor: pointer;
     }
 
     .footer {
