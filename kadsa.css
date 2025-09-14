@@ -101,13 +101,26 @@
         cursor: pointer;
     }
 
+    /* new */
     .new {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: row-reverse;
-        padding-bottom: 30px;
+        padding: 10px;
         max-width: 100%;
+        border-radius: 15px;
+        margin-bottom: 20px;
+    }
+
+    .new {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .new:hover {
+        transform: scale(1.03);
+        box-shadow: 0px 8px 20px rgba(255, 215, 0, 0.4);
+        /* gold glow */
     }
 
     h1,
@@ -143,6 +156,37 @@
         border-left: 5px solid #ffd700;
     }
 
+    /* section */
+    section {
+        background-image: url('./kadsa/earing21.jpg');
+        /* Replace with elegant jewelry or texture */
+        background-size: cover;
+        background-position: center;
+        padding: 40px 20px;
+        border-radius: 10px;
+        color: white;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    /* CTA Button */
+    .cta-button {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #ffd700;
+        /* Gold */
+        color: #5c1f1f;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        transition: 0.3s ease;
+    }
+
+    .cta-button:hover {
+        background-color: #fff4b2;
+        transform: scale(1.05);
+    }
 
 }
 
@@ -228,14 +272,25 @@
         cursor: pointer;
     }
 
+    /* new */
     .new {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding-bottom: 30px;
+        padding: 10px;
         max-width: 100%;
+        border-radius: 15px;
     }
+
+    .new {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .new:hover {
+        transform: scale(1.03);
+        box-shadow: 0px 8px 20px rgba(255, 215, 0, 0.4);
+        /* gold glow */
+    }
+
+
+
 
     /* Footer */
     footer img {
@@ -267,6 +322,17 @@
         background-color: #ffd700;
         height: auto;
     }
+
+    section {
+        background-image: url('./kadsa/earing21.jpg');
+        background-size: cover;
+        background-position: center;
+        padding: 40px 20px;
+        border-radius: 10px;
+        color: white;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
 
 
     /*  Images section */
@@ -320,12 +386,38 @@
     .testimonial {
         background-color: rgba(255, 255, 255, 0.05);
         padding: 15px;
-        margin: 10px auto;
         border-radius: 10px;
         max-width: 600px;
         font-style: italic;
         border-left: 5px solid #ffd700;
     }
 
+    .testimonials-section {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* CTA Button */
+    .cta-button {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #ffd700;
+        /* Gold */
+        color: #5c1f1f;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        transition: 0.3s ease;
+    }
+
+    .cta-button:hover {
+        background-color: #fff4b2;
+        transform: scale(1.05);
+    }
 
 }

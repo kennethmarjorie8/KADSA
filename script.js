@@ -29,5 +29,13 @@ function closeModal() {
 
 /* _____________________________________________________________________ */
 
+/* Closing the pictures */
+document.addEventListener('keydown', function (event) {
+  if (event.key === "Escape") {
+    closeModal();
+  }
+});
+
+
 
 
