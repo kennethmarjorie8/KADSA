@@ -373,25 +373,25 @@
     .earing-section {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 50px;
+        gap: 30px;
     }
 
     .necklace-section {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 50px;
+        gap: 30px;
     }
 
     .set-section {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 50px;
+        gap: 30px;
     }
 
     .bracelet-section {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 50px;
+        gap: 30px;
     }
 
     h1,
