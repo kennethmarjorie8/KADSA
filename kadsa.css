@@ -1,9 +1,24 @@
 @media (max-width: 600px) {
 
     #prices1 {
-        font-size: 25px;
+        background: #ffd700;
+        /* example gold-color */
+        color: #000;
+        /* text color */
+        padding: 0.2em 0.4em;
+        /* spacing around the number */
+        border-radius: 4px;
+        /* rounded corners */
         font-weight: bold;
+        /* make it stand out */
     }
+
+    #price1:hover {
+        background: linear-gradient(45deg, #ff6a88, #ff9a9e);
+        transform: translateY(-2px);
+        transition: background 0.3s, transform 0.2s;
+    }
+
 
     body {
         background-color: #5c1f1f;
@@ -218,8 +233,22 @@
 @media (min-width: 601px) {
 
     #prices1 {
-        font-size: 25px;
+        background: #ffd700;
+        /* example gold-color */
+        color: #000;
+        /* text color */
+        padding: 0.2em 0.4em;
+        /* spacing around the number */
+        border-radius: 4px;
+        /* rounded corners */
         font-weight: bold;
+        /* make it stand out */
+    }
+
+    #price1:hover {
+        background: linear-gradient(45deg, #ff6a88, #ff9a9e);
+        transform: translateY(-2px);
+        transition: background 0.3s, transform 0.2s;
     }
 
     body {
