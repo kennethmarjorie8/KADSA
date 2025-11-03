@@ -1,4 +1,10 @@
 @media (max-width: 600px) {
+
+    #prices1 {
+        font-size: 25px;
+        font-weight: bold;
+    }
+
     body {
         background-color: #5c1f1f;
         color: white;
@@ -210,6 +216,12 @@
 }
 
 @media (min-width: 601px) {
+
+    #prices1 {
+        font-size: 25px;
+        font-weight: bold;
+    }
+
     body {
         background-color: #5c1f1f;
         color: white;
