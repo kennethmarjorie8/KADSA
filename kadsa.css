@@ -59,6 +59,7 @@
         text-decoration: underline;
     }
 
+    /* ___________________________________________________ */
     footer img {
         width: 50px;
         max-width: 100%;
@@ -73,15 +74,6 @@
 
     #footer {
         font-size: 12px;
-    }
-
-    /* Contact Form */
-    footer {
-        text-align: center;
-        padding: 40px 20px;
-        background-color: #5c1f1f;
-        border-top: 3px solid #ffd700;
-        border-radius: 0 0 15px 15px;
     }
 
     .contact-form {
@@ -101,6 +93,7 @@
     .contact-form p {
         font-size: 14px;
         margin-bottom: 15px;
+        color: #fff;
     }
 
     .contact-form input,
@@ -135,6 +128,14 @@
         transform: scale(1.05);
     }
 
+    #formMessage {
+        margin-top: 10px;
+        color: #ffd700;
+        font-weight: bold;
+        display: none;
+    }
+
+    /* _________________________________________ */
 
     .earings p,
     .about p {
@@ -414,7 +415,7 @@
         /* gold glow */
     }
 
-
+    /* ______________________________________________ */
     /* Footer */
     footer img {
         width: 50px;
@@ -432,14 +433,6 @@
         font-size: 12px;
     }
 
-    /* Contact Form */
-    footer {
-        text-align: center;
-        padding: 40px 20px;
-        background-color: #5c1f1f;
-        border-top: 3px solid #ffd700;
-        border-radius: 0 0 15px 15px;
-    }
 
     .contact-form {
         background: rgba(255, 255, 255, 0.1);
@@ -458,6 +451,7 @@
     .contact-form p {
         font-size: 14px;
         margin-bottom: 15px;
+        color: #fff;
     }
 
     .contact-form input,
@@ -492,6 +486,14 @@
         transform: scale(1.05);
     }
 
+    #formMessage {
+        margin-top: 10px;
+        color: #ffd700;
+        font-weight: bold;
+        display: none;
+    }
+
+    /* ___________________________________________ */
 
     .earings p,
     .about p {
