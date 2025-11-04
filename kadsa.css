@@ -64,15 +64,16 @@
 
 
     footer img {
-        width: 50px;
+        width: 40px;
         max-width: 100%;
         border-radius: 13px;
         cursor: pointer;
         box-shadow: 1px 1px 8px 4px rgba(0, 0, 0, 0.3);
         position: fixed;
         bottom: 20px;
-        right: 30px;
+        right: 20px;
         z-index: 5000;
+        border: white solid 3px;
     }
 
     #footer {
@@ -430,15 +431,16 @@
     /* ______________________________________________ */
     /* Footer */
     footer img {
-        width: 50px;
+        width: 40px;
         max-width: 100%;
         border-radius: 13px;
         cursor: pointer;
         box-shadow: 1px 1px 8px 4px rgba(0, 0, 0, 0.3);
         position: fixed;
         bottom: 20px;
-        right: 30px;
+        right: 20px;
         z-index: 5000;
+        border: white solid 3px;
     }
 
     #footer {
