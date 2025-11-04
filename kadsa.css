@@ -75,6 +75,67 @@
         font-size: 12px;
     }
 
+    /* Contact Form */
+    footer {
+        text-align: center;
+        padding: 40px 20px;
+        background-color: #5c1f1f;
+        border-top: 3px solid #ffd700;
+        border-radius: 0 0 15px 15px;
+    }
+
+    .contact-form {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 500px;
+        margin: 0 auto 30px auto;
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+    }
+
+    .contact-form h3 {
+        color: #ffd700;
+        font-family: 'Playfair Display', serif;
+    }
+
+    .contact-form p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 5px;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+        outline: 2px solid #ffd700;
+        background-color: #fff4b2;
+    }
+
+    .contact-form button {
+        background-color: #ffd700;
+        color: #5c1f1f;
+        font-weight: bold;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+    .contact-form button:hover {
+        background-color: #fff4b2;
+        transform: scale(1.05);
+    }
+
+
     .earings p,
     .about p {
         font-size: 15px;
@@ -361,11 +422,76 @@
         border-radius: 13px;
         cursor: pointer;
         box-shadow: 1px 1px 8px 4px rgba(0, 0, 0, 0.3);
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 5000;
     }
 
     #footer {
         font-size: 12px;
     }
+
+    /* Contact Form */
+    footer {
+        text-align: center;
+        padding: 40px 20px;
+        background-color: #5c1f1f;
+        border-top: 3px solid #ffd700;
+        border-radius: 0 0 15px 15px;
+    }
+
+    .contact-form {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 500px;
+        margin: 0 auto 30px auto;
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+    }
+
+    .contact-form h3 {
+        color: #ffd700;
+        font-family: 'Playfair Display', serif;
+    }
+
+    .contact-form p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 5px;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+        outline: 2px solid #ffd700;
+        background-color: #fff4b2;
+    }
+
+    .contact-form button {
+        background-color: #ffd700;
+        color: #5c1f1f;
+        font-weight: bold;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+    .contact-form button:hover {
+        background-color: #fff4b2;
+        transform: scale(1.05);
+    }
+
 
     .earings p,
     .about p {
