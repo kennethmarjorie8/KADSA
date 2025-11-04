@@ -67,7 +67,8 @@
         box-shadow: 1px 1px 8px 4px rgba(0, 0, 0, 0.3);
         position: fixed;
         bottom: 20px;
-        right: 45px;
+        right: 40px;
+        z-index: 1000;
     }
 
     #footer {
