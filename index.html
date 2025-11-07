@@ -18,6 +18,11 @@
 
 <body>
     <div class="main">
+
+        <!-- <div class="header-section">
+            <a href="#contact-us">Contáctanos</a>
+        </div> -->
+
         <main>
 
             <section>
@@ -436,15 +441,10 @@
                 <div class="divider"></div>
 
                 <div class="contact">
-                    <h2>Contáctanos</h2>
+                    <h2 id="contact-us">Contáctanos</h2>
                 </div>
 
                 <footer>
-
-                    <!-- <a href="https://www.instagram.com/kadsa18/" target="_blank"><img src="./kadsa/instagram-logo.png"
-                            alt="instagram"></a>
-
-                    <p id="footer">©2025 | Kenneth Duron y Marjorie Fiallos | Honduras</p> -->
 
                     <div class="contact-form">
                         <h3>¿Tienes una pregunta o deseas una joya personalizada?</h3>
@@ -453,6 +453,8 @@
                         <form id="contactForm" action="https://formspree.io/f/mblznzyy" method="POST">
                             <input type="text" name="name" placeholder="Tu nombre" required>
                             <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                            <input type="tel" name="phone" inputmode="numeric" placeholder="Tu número telefónico"
+                                required>
                             <textarea name="message" rows="4" placeholder="Escribe tu mensaje aquí..."
                                 required></textarea>
                             <button type="submit">Enviar</button>

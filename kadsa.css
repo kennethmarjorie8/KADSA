@@ -650,4 +650,27 @@
         transform: scale(1.05);
     }
 
+    /* .header-section {
+        background-color: #5c1f1f;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 40px;
+        position: fixed;
+        z-index: 6000;
+        top: 0;
+        left: 0
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .header-section a {
+        color: #ffd700;
+        font-family: 'Playfair Display', serif;
+        font-size: 18px;
+        line-height: 50px;
+        text-decoration: none;
+        padding: 0 20px;
+    } */
+
 }
