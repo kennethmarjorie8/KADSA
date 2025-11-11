@@ -341,14 +341,14 @@
 
     main {
         background-color: #a73232;
-        padding-top: 20px;
-        padding-bottom: 20px;
+        /* padding-top: 20px; */
+        padding-bottom: 50px;
         max-width: 100%;
         text-align: center;
         margin: 10px;
         border-radius: 15px;
-        padding-left: 20px;
-        padding-right: 20px;
+        /* padding-left: 20px;
+        padding-right: 20px; */
         box-shadow: 0px 5px 8px 8px rgba(0, 0, 0, 0.3);
     }
 
@@ -359,7 +359,7 @@
     }
 
     #kadsa-logo {
-        border-radius: 100px;
+        border-radius: 100%;
         box-shadow: 0px 1px 8px 8px rgba(0, 0, 0, 0.3);
         width: 200px;
         max-width: 100%;
@@ -521,12 +521,19 @@
         font-size: 15px;
     }
 
+    .earing1 {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
     /* About section */
     .about {
         display: grid;
         grid-template-columns: 1fr 2px 1fr;
         align-items: start;
         gap: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .about>div:nth-child(2) {
@@ -540,7 +547,9 @@
         background-size: cover;
         background-position: center;
         padding: 40px 20px;
-        border-radius: 10px;
+        /* border-radius: 10px; */
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
         color: white;
         text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
         overflow: hidden;
@@ -561,6 +570,11 @@
     section>* {
         position: relative;
         z-index: 1;
+    }
+
+    #border1 {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
     }
 
 
@@ -650,6 +664,8 @@
         transform: scale(1.05);
     }
 
+
+
     /* .header-section {
         background-color: #5c1f1f;
         padding: 0;
@@ -659,9 +675,10 @@
         position: fixed;
         z-index: 6000;
         top: 0;
-        left: 0
+        left: 0;
         display: flex;
         justify-content: flex-end;
+        align-items: center;
     }
 
     .header-section a {
