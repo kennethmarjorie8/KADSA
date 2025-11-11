@@ -342,7 +342,7 @@
     main {
         background-color: #a73232;
         /* padding-top: 20px; */
-        padding-bottom: 50px;
+        /* padding-bottom: 50px; */
         max-width: 100%;
         text-align: center;
         margin: 10px;
@@ -447,6 +447,14 @@
         font-size: 12px;
     }
 
+    .footer-box {
+        background-color: #5c1f1f;
+        padding-top: 20px;
+        padding-bottom: 5px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
     #contactForm {
         display: flex;
         flex-direction: column;
@@ -462,6 +470,10 @@
         max-width: 500px;
         margin: 0 auto 30px auto;
         box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+    }
+
+    footer {
+        padding-bottom: 50px;
     }
 
     .contact-form h3 {
