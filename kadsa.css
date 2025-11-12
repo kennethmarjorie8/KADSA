@@ -34,7 +34,7 @@
 
     main {
         /*  background-color: #a73232; */
-        background-color: #F7E9B0;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0.09), rgba(255, 255, 255, 0.02));
         /* pale gold background for brightness */
         color: #2B0A0A;
 
@@ -241,7 +241,7 @@
         max-width: 100%;
         border-radius: 15px;
         margin-bottom: 20px;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0.03));
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(0, 0, 0, 0.03));
     }
 
     .new {
@@ -382,9 +382,8 @@
     }
 
     main {
-        background-color: #F7E9B0;
         color: #2B0A0A;
-
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0.09), rgba(255, 255, 255, 0.02));
         max-width: 100%;
         text-align: center;
         box-shadow: 0px 5px 8px 8px rgba(0, 0, 0, 0.18);
@@ -455,7 +454,7 @@
         padding: 10px;
         max-width: 100%;
         border-radius: 15px;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0.03));
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(0, 0, 0, 0.03));
     }
 
     .new {
