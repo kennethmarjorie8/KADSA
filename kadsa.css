@@ -249,8 +249,12 @@
     h4 {
         font-family: 'Playfair Display', serif;
         letter-spacing: 1px;
-        color: #FFF8E7;
+        color: #2B0A0A;
 
+    }
+
+    #exception-color {
+        color: white;
     }
 
     /*  hr */
@@ -627,8 +631,13 @@
     h4 {
         font-family: 'Playfair Display', serif;
         letter-spacing: 1px;
-        color: #FFF8E7;
+        color: #2B0A0A;
     }
+
+    #exception-color {
+        color: white;
+    }
+
 
     /*  hr */
     .divider {
