@@ -4,6 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="KADSA Jewelry: joyería fina, elegante y moderna en Honduras. Encuentra aretes, collares, pulseras y sets únicos.">
+    <meta name="keywords" content="joyas, collares, aretes, pulseras, Honduras, KADSA Jewelry">
+    <meta name="author" content="KADSA Jewelry">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -19,11 +24,19 @@
 <body>
     <div class="main">
 
-        <!-- <div class="header-section">
-            <a href="#contact-us">Contáctanos</a>
-        </div> -->
+        <main id="start">
 
-        <main>
+            <div class="header-section">
+                <a href="#start" class="logo">KADSA JEWELRY</a>
+                <div class="burger" onclick="toggleMenu()">&#9776;</div>
+                <nav id="nav-menu">
+                    <a class="only" href="#contact1">Contáctanos</a>
+                    <a href="#h2">Aretes</a>
+                    <a href="#second-part">Collares</a>
+                    <a href="#third-part">Sets</a>
+                    <a href="#fourth-part">Pulseras</a>
+                </nav>
+            </div>
 
             <section>
                 <div class="second">
@@ -31,7 +44,7 @@
                 </div>
                 <h1 id="exception-color">¡Somos KADSA !</h1>
                 <h2 id="exception-color">“El Brillo Que Llevas Dentro Merece Ser Visto Por Fuera”</h2><br>
-                <a href="#h2" class="cta-button">Ver Colección</a>
+                <a href="#first-part" class="cta-button">Ver Colección</a>
             </section>
 
 
@@ -64,7 +77,7 @@
 
             </div>
 
-            <div class="divider"></div>
+            <div id="first-part" class="divider"></div>
 
             <div class="earings">
                 <h2 id="h2">Nuestros estilos...</h2>
@@ -286,7 +299,7 @@
 
                     </div>
 
-                    <div class="divider"></div>
+                    <div id="second-part" class="divider"></div>
 
                     <h3 id="h3">COLLARES</h3>
 
@@ -340,7 +353,7 @@
                         </div>
                     </div>
 
-                    <div class="divider"></div>
+                    <div id="third-part" class="divider"></div>
 
                     <h3 id="h3">SET DE COLLARES Y ARETES</h3><br>
                     <div class="set-section">
@@ -393,7 +406,7 @@
 
                     </div>
 
-                    <div class="divider"></div>
+                    <div id="fourth-part" class="divider"></div>
 
                     <h3 id="h3">PULSERAS</h3><br>
                     <div class="bracelet-section">
@@ -441,7 +454,7 @@
                 <div class="divider"></div>
 
                 <div class="footer-box">
-                    <div class="contact">
+                    <div id="contact1" class="contact">
                         <h2 id="contact-us">Contáctanos</h2>
                     </div>
 
