@@ -845,7 +845,7 @@
     .only {
         border: #2B0A0A solid 3px;
         padding: 3px;
-        border-radius: 5px;
+        border-radius: 8px;
     }
 
     .only:hover {
