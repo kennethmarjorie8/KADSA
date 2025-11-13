@@ -856,7 +856,7 @@
 
     .only:hover {
         background-color: black;
-        transform: scale(1.05);
+        /* transform: scale(1.05); */
         color: white;
         text-decoration: none;
     }
