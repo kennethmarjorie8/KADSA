@@ -375,7 +375,7 @@
     .header-section a {
         text-decoration: none;
         color: #2B0A0A;
-        margin: 0 12px;
+        margin: 0 0px;
         font-weight: 600;
         transition: color 0.3s ease;
     }
@@ -422,9 +422,18 @@
         text-decoration: underline;
     }
 
-    .nav-menu>.only {
-        text-decoration: none;
+    .only {
         border: #2B0A0A solid 3px;
+        padding: 3px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+
+    }
+
+    .only:hover {
+        text-decoration: none;
+        background-color: black;
+        color: white;
 
     }
 }
