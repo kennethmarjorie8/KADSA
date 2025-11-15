@@ -576,6 +576,7 @@
         right: 20px;
         z-index: 900;
         border: #FFFFFF solid 3px;
+        transform: scale(1.05);
     }
 
     #footer {
