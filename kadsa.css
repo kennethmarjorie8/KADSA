@@ -909,7 +909,7 @@
 
     /* Fade-in animation */
 
-    .fade {
+  /*   .fade {
         opacity: 0;
         transform: translateY(20px);
         transition: all 0.8s ease-out;
@@ -918,6 +918,6 @@
     .fade.show {
         opacity: 1;
         transform: translateY(0);
-    }
+    } */
 
 }

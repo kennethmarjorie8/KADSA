@@ -78,7 +78,7 @@ function toggleMenu() {
 
 
 /* ______________________________________________________ */
-const elements = document.querySelectorAll('.fade');
+/* const elements = document.querySelectorAll('.fade');
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -88,5 +88,5 @@ const observer = new IntersectionObserver(entries => {
   });
 });
 
-elements.forEach(el => observer.observe(el));
+elements.forEach(el => observer.observe(el)); */
 
