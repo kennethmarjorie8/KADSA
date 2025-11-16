@@ -78,6 +78,12 @@
         border: #FFFFFF solid 3px;
     }
 
+    footer img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 14px rgba(230, 200, 74, 0.38);
+        transition: 0.3s;
+    }
+
     #footer {
         font-size: 12px;
         color: #FFFFFF;
