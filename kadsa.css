@@ -568,7 +568,7 @@
     footer img {
         width: 45px;
         max-width: 100%;
-        border-radius: 13px;
+        border-radius: 15px;
         cursor: pointer;
         box-shadow: 1px 1px 8px 4px rgba(0, 0, 0, 0.18);
         position: fixed;
@@ -576,6 +576,12 @@
         right: 20px;
         z-index: 900;
         border: #FFFFFF solid 3px;
+    }
+
+    footer img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 14px rgba(230, 200, 74, 0.38);
+        transition: 0.3s;
     }
 
     #footer {
