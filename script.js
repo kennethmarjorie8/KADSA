@@ -75,3 +75,18 @@ function toggleMenu() {
   const nav = document.getElementById('nav-menu');
   nav.classList.toggle('active');
 }
+
+
+/* ______________________________________________________ */
+const elements = document.querySelectorAll('.fade');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+elements.forEach(el => observer.observe(el));
+
