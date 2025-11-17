@@ -466,6 +466,16 @@
         opacity: 1;
         transform: translateY(0);
     }
+
+    /* ____________________________________________________ */
+    /* ring-section */
+    .ring-section {
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 
@@ -918,6 +928,13 @@
     .fade.show {
         opacity: 1;
         transform: translateY(0);
+    }
+
+    /* ____________________________________________________ */
+    /* ring-section */
+    .ring-section {
+        padding-left: 30px;
+        padding-right: 30px;
     }
 
 }
