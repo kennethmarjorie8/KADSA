@@ -519,12 +519,6 @@
         border-radius: 8px;
     }
 
-    .main {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
     #kadsa-logo {
         border-radius: 100%;
         box-shadow: 0px 4px 14px 6px rgba(230, 200, 74, 0.20);
@@ -937,5 +931,5 @@
         padding-right: 25px;
     }
 
-
+    .main
 }
