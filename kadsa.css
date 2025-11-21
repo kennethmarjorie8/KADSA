@@ -934,7 +934,7 @@
     /* ____________________________________________________ */
     /* ring-section */
     .ring-section {
-        /* padding-left: 25px;
-        padding-right: 25px; */
+        display: grid;
+        grid-template-columns: 1fr;
     }
 }
