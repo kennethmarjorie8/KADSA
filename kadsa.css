@@ -937,6 +937,7 @@
         display: grid;
         grid-template-columns: 1fr;
     }
+
 }
 
 @media (min-width: 601px) and (max-width: 845px) {
