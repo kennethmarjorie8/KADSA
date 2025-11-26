@@ -290,7 +290,7 @@
 
     /* testimonials */
     .testimonials {
-        margin-top: 40px;
+        /* margin-top: 40px; */
         text-align: center;
     }
 
@@ -316,6 +316,11 @@
         text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.55);
         overflow: hidden;
     }
+
+    /* #border1 {
+        padding-top: 0px;
+        padding-bottom: 20px;
+    } */
 
     section::before {
         content: "";
@@ -737,6 +742,10 @@
         padding-right: 100px;
     }
 
+    #border1 {
+        padding-top: 0px;
+    }
+
     section::before {
         content: "";
         position: absolute;
@@ -812,7 +821,7 @@
 
     /* testimonials */
     .testimonials {
-        margin-top: 40px;
+        /* margin-top: 40px; */
         text-align: center;
     }
 
@@ -1197,6 +1206,10 @@
         padding-right: 20px;
     }
 
+    #border1 {
+        padding-top: 0px;
+    }
+
     section::before {
         content: "";
         position: absolute;
@@ -1272,7 +1285,7 @@
 
     /* testimonials */
     .testimonials {
-        margin-top: 40px;
+        /* margin-top: 40px; */
         text-align: center;
     }
 
