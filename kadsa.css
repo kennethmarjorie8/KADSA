@@ -257,6 +257,20 @@
         /* gold glow */
     }
 
+    .out::before {
+        content: "Agotado";
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        /* background-color: #E6C84A; */
+        background: linear-gradient(135deg, #FF6B6B, #FF3B3B);
+        color: #2B0A0A;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: bold;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
     h1,
     h2,
     h3,
@@ -482,15 +496,6 @@
         padding-right: 20px; */
     }
 
-    /* out of stock */
-    #out {
-        color: white;
-        font-weight: bold;
-        /* background-color: red; */
-        padding: 3px 6px;
-        border-radius: 4px;
-        background: linear-gradient(135deg, #FF6B6B, #FF3B3B);
-    }
 }
 
 
@@ -603,6 +608,20 @@
         transform: scale(1.03);
         box-shadow: 0px 8px 20px rgba(230, 200, 74, 0.28);
         /* gold glow */
+    }
+
+    .out::before {
+        content: "Agotado";
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        /* background-color: #E6C84A; */
+        background: linear-gradient(135deg, #FF6B6B, #FF3B3B);
+        color: #2B0A0A;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: bold;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     }
 
     /* ______________________________________________ */
@@ -957,16 +976,6 @@
         grid-template-columns: 1fr;
     }
 
-    /* out of stock */
-    #out {
-        color: white;
-        font-weight: bold;
-        /* background-color: red; */
-        padding: 3px 6px;
-        border-radius: 4px;
-        background: linear-gradient(135deg, #FF6B6B, #FF3B3B);
-    }
-
 }
 
 @media (min-width: 601px) and (max-width: 845px) {
@@ -1077,6 +1086,20 @@
         transform: scale(1.03);
         box-shadow: 0px 8px 20px rgba(230, 200, 74, 0.28);
         /* gold glow */
+    }
+
+    .out::before {
+        content: "Agotado";
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        /* background-color: #E6C84A; */
+        background: linear-gradient(135deg, #FF6B6B, #FF3B3B);
+        color: #2B0A0A;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: bold;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     }
 
     /* ______________________________________________ */
@@ -1466,13 +1489,4 @@
         grid-template-columns: 1fr;
     }
 
-    /* out of stock */
-    #out {
-        color: white;
-        font-weight: bold;
-        /* background-color: red; */
-        padding: 3px 6px;
-        border-radius: 4px;
-        background: linear-gradient(135deg, #FF6B6B, #FF3B3B);
-    }
 }
