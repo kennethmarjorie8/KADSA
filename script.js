@@ -76,6 +76,20 @@ function toggleMenu() {
   nav.classList.toggle('active');
 }
 
+// Close menu when clicking outside
+document.addEventListener("click", function (event) {
+    const nav = document.getElementById("nav-menu");
+    const burger = document.querySelector(".burger");
+
+    // If menu is open and you click outside nav + outside burger → close it
+    if (nav.classList.contains("active") &&
+        !nav.contains(event.target) &&
+        !burger.contains(event.target)) {
+        nav.classList.remove("active");
+    }
+});
+
+
 
 /* ______________________________________________________ */
 /* fade */
