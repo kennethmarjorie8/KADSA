@@ -481,6 +481,16 @@
         /* padding-left: 20px;
         padding-right: 20px; */
     }
+
+    /* out of stock */
+    #out {
+        color: white;
+        font-weight: bold;
+        /* background-color: red; */
+        padding: 3px 6px;
+        border-radius: 4px;
+        background: linear-gradient(135deg, #FF6B6B, #FF3B3B);
+    }
 }
 
 
@@ -945,6 +955,16 @@
     .ring-section {
         display: grid;
         grid-template-columns: 1fr;
+    }
+
+    /* out of stock */
+    #out {
+        color: white;
+        font-weight: bold;
+        /* background-color: red; */
+        padding: 3px 6px;
+        border-radius: 4px;
+        background: linear-gradient(135deg, #FF6B6B, #FF3B3B);
     }
 
 }
@@ -1444,5 +1464,15 @@
     .ring-section {
         display: grid;
         grid-template-columns: 1fr;
+    }
+
+    /* out of stock */
+    #out {
+        color: white;
+        font-weight: bold;
+        /* background-color: red; */
+        padding: 3px 6px;
+        border-radius: 4px;
+        background: linear-gradient(135deg, #FF6B6B, #FF3B3B);
     }
 }
