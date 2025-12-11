@@ -271,6 +271,19 @@
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     }
 
+    .recent::before {
+        content: "Nuevo";
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: #E6C84A;
+        color: #2B0A0A;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: bold;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
     h1,
     h2,
     h3,
@@ -489,11 +502,9 @@
     /* ____________________________________________________ */
     /* ring-section */
     .ring-section {
-        /* display: flex;
-        justify-content: center;
-        align-items: center; */
-        /* padding-left: 20px;
-        padding-right: 20px; */
+        display: grid;
+        /* grid-template-columns: 1fr 1fr 1fr; */
+        /* gap: 30px; */
     }
 
 }
@@ -617,6 +628,19 @@
         left: 10px;
         /* background-color: #E6C84A; */
         background: linear-gradient(135deg, #FF6B6B, #FF3B3B);
+        color: #2B0A0A;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: bold;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .recent::before {
+        content: "Nuevo";
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: #E6C84A;
         color: #2B0A0A;
         padding: 5px 10px;
         border-radius: 5px;
@@ -973,7 +997,8 @@
     /* ring-section */
     .ring-section {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
     }
 
 }
@@ -1095,6 +1120,19 @@
         left: 10px;
         /* background-color: #E6C84A; */
         background: linear-gradient(135deg, #FF6B6B, #FF3B3B);
+        color: #2B0A0A;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: bold;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .recent::before {
+        content: "Nuevo";
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: #E6C84A;
         color: #2B0A0A;
         padding: 5px 10px;
         border-radius: 5px;
@@ -1486,7 +1524,8 @@
     /* ring-section */
     .ring-section {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
     }
 
 }
