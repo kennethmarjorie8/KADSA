@@ -237,38 +237,42 @@ document.addEventListener("DOMContentLoaded", () => {
   /* =====================
      SEND ORDER (FORMSPREE)
   ===================== */
-  if (orderForm) {
-    orderForm.addEventListener("submit", async (e) => {
-      e.preventDefault();
+  orderForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-      if (cart.length === 0) {
-        alert("Tu carrito está vacío.");
-        return;
+    if (cart.length === 0) {
+      alert("Tu carrito está vacío.");
+      return;
+    }
+
+    const data = new FormData(orderForm);
+
+    try {
+      const response = await fetch(orderForm.action, {
+        method: "POST",
+        body: data,
+        headers: { "Accept": "application/json" }
+      });
+
+      if (response.ok) {
+        // reset everything
+        orderForm.reset();
+        cart = [];
+        updateCart();
+
+        // show success message briefly
+        successMsg.style.display = "block";
+
+        setTimeout(() => {
+          successMsg.style.display = "none";
+        }, 4000);
+      } else {
+        alert("Error al enviar la orden.");
       }
+    } catch {
+      alert("Error de conexión.");
+    }
+  });
 
-      const data = new FormData(orderForm);
-
-      try {
-        const response = await fetch(orderForm.action, {
-          method: "POST",
-          body: data,
-          headers: { "Accept": "application/json" }
-        });
-
-        if (response.ok) {
-          orderForm.reset();
-          cart = [];
-          updateCart();
-
-          orderForm.style.display = "none";
-          successMsg.style.display = "block";
-        } else {
-          alert("Error al enviar la orden.");
-        }
-      } catch {
-        alert("Error de conexión.");
-      }
-    });
-  }
 });
 
