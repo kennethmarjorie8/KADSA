@@ -515,14 +515,14 @@
 
     .cart-icon {
         position: fixed;
-        top: 90px;
+        top: 670px;
         background: #E6C84A;
         color: #000;
         padding: 10px 14px;
         border-radius: 50px;
         font-weight: bold;
         cursor: pointer;
-        z-index: 9999;
+        z-index: 999;
     }
 
     .cart-icon span {
