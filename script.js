@@ -171,30 +171,57 @@ function saveCart() {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-function sendWhatsApp() {
+async function sendOrderEmail() {
   if (cart.length === 0) {
     alert("El carrito está vacío");
     return;
   }
 
-  let message = "🛍️ Pedido KADSA Jewelry\n\n";
+  const name = document.getElementById("customer-name").value.trim();
+  const phone = document.getElementById("customer-phone").value.trim();
+  const messageBox = document.getElementById("cart-message");
+
+  if (!name || !phone) {
+    alert("Por favor ingresa tu nombre y teléfono");
+    return;
+  }
+
+  let orderText = `Nombre: ${name}\nTeléfono: ${phone}\n\nPedido:\n`;
   let total = 0;
 
   cart.forEach(item => {
-    message += `• ${item.name} x${item.qty} = L. ${item.price * item.qty}\n`;
+    orderText += `• ${item.name} x${item.qty} = L. ${item.price * item.qty}\n`;
     total += item.price * item.qty;
   });
 
-  message += `\nTotal a pagar: L. ${total}`;
+  orderText += `\nTotal: L. ${total}`;
 
-  const phone = "50493014381"; // 🔴 PUT YOUR REAL NUMBER HERE
+  try {
+    const response = await fetch("https://formspree.io/f/mblznzyy", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: name,
+        phone: phone,
+        message: orderText
+      })
+    });
 
-  const url =
-    "https://wa.me/" +
-    phone +
-    "?text=" +
-    encodeURIComponent(message);
+    if (response.ok) {
+      cart = [];
+      saveCart();
+      updateCart();
 
-  window.open(url, "_blank");
+      document.getElementById("customer-name").value = "";
+      document.getElementById("customer-phone").value = "";
+
+      messageBox.style.display = "block";
+      setTimeout(() => messageBox.style.display = "none", 4000);
+    } else {
+      alert("Error al enviar el pedido");
+    }
+  } catch (err) {
+    alert("Error de conexión");
+  }
 }
 
