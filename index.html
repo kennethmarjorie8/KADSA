@@ -706,35 +706,45 @@
 
     <!-- ================= CART PANEL ================= -->
     <div id="cart-panel">
+
         <div class="cart-header">
-            <h3>Tu pedido</h3>
+            <h3>Tus pedidos</h3>
             <button class="close-cart" onclick="toggleCart()">✕</button>
         </div>
 
-        <div id="cart-items"></div>
+        <!-- ORDER FORM -->
+        <form id="order-form" action="https://formspree.io/f/mblznzyy" method="POST">
 
-        <div class="cart-footer">
+            <!-- CUSTOMER INFO (TOP) -->
+            <div class="customer-info">
+                <input type="text" name="name" placeholder="Tu nombre" required>
+
+                <input type="tel" name="phone" placeholder="Tu número de teléfono" required>
+            </div>
+
+            <!-- CART ITEMS -->
+            <div id="cart-items"></div>
+
+            <!-- TOTAL -->
             <p class="cart-total">
-                Total: L. <span id="cart-total">0</span>
+                Total: L. <span id="cart-total">0.00</span>
             </p>
 
-            <form id="order-form" action="https://formspree.io/f/mblznzyy" method="POST">
-                <input type="hidden" name="order" id="order-details">
+            <!-- HIDDEN ORDER DETAILS -->
+            <input type="hidden" name="order" id="order-details">
 
-                <input type="text" name="name" placeholder="Nombre completo" required>
+            <!-- SEND BUTTON -->
+            <button type="submit" class="send-order">
+                Enviar orden
+            </button>
 
-                <input type="tel" name="phone" placeholder="Número de teléfono" required>
+            <!-- SUCCESS MESSAGE -->
+            <p id="order-success">✅ Orden enviada con éxito</p>
 
-                <button type="submit" class="send-order">
-                    Enviar pedido
-                </button>
-            </form>
+        </form>
 
-            <p id="order-success">
-                ✅ El pedido fue enviado correctamente
-            </p>
-        </div>
     </div>
+
 
 
     <script src="./script.js"></script>
