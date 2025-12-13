@@ -104,3 +104,85 @@ const observer = new IntersectionObserver(entries => {
 });
 
 elements.forEach(el => observer.observe(el));
+
+
+/* ================= CART SYSTEM ================= */
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+updateCart();
+
+function addToCart(name, price) {
+  const product = cart.find(item => item.name === name);
+  product ? product.qty++ : cart.push({ name, price, qty: 1 });
+  saveCart();
+  updateCart();
+}
+
+function updateCart() {
+  const cartItems = document.getElementById("cart-items");
+  const cartTotal = document.getElementById("cart-total");
+  const cartCount = document.getElementById("cart-count");
+
+  if (!cartItems) return;
+
+  cartItems.innerHTML = "";
+  let total = 0;
+  let count = 0;
+
+  cart.forEach((item, index) => {
+    total += item.price * item.qty;
+    count += item.qty;
+
+    cartItems.innerHTML += `
+      <div class="cart-item">
+        <strong>${item.name}</strong>
+        <div class="cart-controls">
+          <button onclick="changeQty(${index}, -1)">➖</button>
+          <span>${item.qty}</span>
+          <button onclick="changeQty(${index}, 1)">➕</button>
+          <button class="remove-btn" onclick="removeItem(${index})">🗑</button>
+        </div>
+      </div>
+    `;
+  });
+
+  cartTotal.textContent = total;
+  cartCount.textContent = count;
+}
+
+function changeQty(index, amount) {
+  cart[index].qty += amount;
+  if (cart[index].qty <= 0) cart.splice(index, 1);
+  saveCart();
+  updateCart();
+}
+
+function removeItem(index) {
+  cart.splice(index, 1);
+  saveCart();
+  updateCart();
+}
+
+function toggleCart() {
+  document.getElementById("cart-panel").classList.toggle("active");
+}
+
+function saveCart() {
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+function sendWhatsApp() {
+  if (!cart.length) return alert("El carrito está vacío");
+
+  let msg = "🛍️ Pedido KADSA:%0A";
+  let total = 0;
+
+  cart.forEach(item => {
+    msg += `• ${item.name} x${item.qty} = L.${item.price * item.qty}%0A`;
+    total += item.price * item.qty;
+  });
+
+  msg += `%0A*Total: L.${total}*`;
+
+  window.open(`https://wa.me/504XXXXXXXX?text=${msg}`, "_blank");
+}
