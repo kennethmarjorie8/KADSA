@@ -184,5 +184,5 @@ function sendWhatsApp() {
 
   msg += `%0A*Total: L.${total}*`;
 
-  window.open(`https://wa.me/504XXXXXXXX?text=${msg}`, "_blank");
+  window.open(`https://wa.me/50493014381?text=${msg}`, "_blank");
 }
