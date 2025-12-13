@@ -172,17 +172,29 @@ function saveCart() {
 }
 
 function sendWhatsApp() {
-  if (!cart.length) return alert("El carrito está vacío");
+  if (cart.length === 0) {
+    alert("El carrito está vacío");
+    return;
+  }
 
-  let msg = "🛍️ Pedido KADSA:%0A";
+  let message = "🛍️ Pedido KADSA Jewelry\n\n";
   let total = 0;
 
   cart.forEach(item => {
-    msg += `• ${item.name} x${item.qty} = L.${item.price * item.qty}%0A`;
+    message += `• ${item.name} x${item.qty} = L. ${item.price * item.qty}\n`;
     total += item.price * item.qty;
   });
 
-  msg += `%0A*Total: L.${total}*`;
+  message += `\nTotal a pagar: L. ${total}`;
 
-  window.open(`https://wa.me/50493014381?text=${msg}`, "_blank");
+  const phone = "50493014381"; // 🔴 PUT YOUR REAL NUMBER HERE
+
+  const url =
+    "https://wa.me/" +
+    phone +
+    "?text=" +
+    encodeURIComponent(message);
+
+  window.open(url, "_blank");
 }
+
