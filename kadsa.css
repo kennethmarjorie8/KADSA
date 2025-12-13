@@ -697,15 +697,24 @@
         opacity: 0.9;
     }
 
-    /* =====================================================
-   SUCCESS MESSAGE
-===================================================== */
+    /* ================================
+   ORDER SUCCESS MESSAGE – CENTERED
+================================ */
     #order-success {
         display: none;
-        margin-top: 10px;
-        color: green;
-        font-size: 14px;
+        margin-top: 16px;
+        text-align: center;
+        /* center text */
+        font-size: 15px;
+        font-weight: 600;
+        color: #2e7d32;
+        /* elegant success green */
+        padding: 12px;
+        border-radius: 8px;
+        background: #eaf7ea;
+        /* soft green background */
     }
+
 
     /* =====================================================
    ADD TO CART BUTTON (PRODUCTS)
@@ -1463,15 +1472,24 @@
         opacity: 0.9;
     }
 
-    /* =====================================================
-   SUCCESS MESSAGE
-===================================================== */
+    /* ================================
+   ORDER SUCCESS MESSAGE – CENTERED
+================================ */
     #order-success {
         display: none;
-        margin-top: 10px;
-        color: green;
-        font-size: 14px;
+        margin-top: 16px;
+        text-align: center;
+        /* center text */
+        font-size: 15px;
+        font-weight: 600;
+        color: #2e7d32;
+        /* elegant success green */
+        padding: 12px;
+        border-radius: 8px;
+        background: #eaf7ea;
+        /* soft green background */
     }
+
 
     /* =====================================================
    ADD TO CART BUTTON (PRODUCTS)
@@ -2262,15 +2280,24 @@
         opacity: 0.9;
     }
 
-    /* =====================================================
-   SUCCESS MESSAGE
-===================================================== */
+    /* ================================
+   ORDER SUCCESS MESSAGE – CENTERED
+================================ */
     #order-success {
         display: none;
-        margin-top: 10px;
-        color: green;
-        font-size: 14px;
+        margin-top: 16px;
+        text-align: center;
+        /* center text */
+        font-size: 15px;
+        font-weight: 600;
+        color: #2e7d32;
+        /* elegant success green */
+        padding: 12px;
+        border-radius: 8px;
+        background: #eaf7ea;
+        /* soft green background */
     }
+
 
     /* =====================================================
    ADD TO CART BUTTON (PRODUCTS)
