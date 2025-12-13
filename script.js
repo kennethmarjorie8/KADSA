@@ -105,123 +105,170 @@ const observer = new IntersectionObserver(entries => {
 
 elements.forEach(el => observer.observe(el));
 
+/* =====================================================
+   CART LOGIC – ADD / REMOVE / + / - / TRASH / FORMSPREE
+===================================================== */
 
-/* ================= CART SYSTEM ================= */
+let cart = [];
 
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
-updateCart();
-
-function addToCart(name, price) {
-  const product = cart.find(item => item.name === name);
-  product ? product.qty++ : cart.push({ name, price, qty: 1 });
-  saveCart();
-  updateCart();
-}
-
-function updateCart() {
+document.addEventListener("DOMContentLoaded", () => {
+  const cartPanel = document.getElementById("cart-panel");
   const cartItems = document.getElementById("cart-items");
   const cartTotal = document.getElementById("cart-total");
   const cartCount = document.getElementById("cart-count");
+  const orderForm = document.getElementById("order-form");
+  const orderDetails = document.getElementById("order-details");
+  const successMsg = document.getElementById("order-success");
+  const cartIcon = document.querySelector(".cart-icon");
 
-  if (!cartItems) return;
+  /* =====================
+     TOGGLE CART
+  ===================== */
+  window.toggleCart = function () {
+    cartPanel.classList.toggle("active");
+  };
 
-  cartItems.innerHTML = "";
-  let total = 0;
-  let count = 0;
+  /* =====================
+     CLOSE CART ON OUTSIDE CLICK
+     (EXCEPT + / - / 🗑)
+  ===================== */
+  document.addEventListener("click", (e) => {
+    const isInsideCart = cartPanel.contains(e.target);
+    const isCartIcon = cartIcon.contains(e.target);
+    const isQtyButton = e.target.closest(".cart-controls button");
+    const isTrashButton = e.target.closest(".cart-trash");
 
-  cart.forEach((item, index) => {
-    total += item.price * item.qty;
-    count += item.qty;
+    if (
+      cartPanel.classList.contains("active") &&
+      !isInsideCart &&
+      !isCartIcon &&
+      !isQtyButton &&
+      !isTrashButton
+    ) {
+      cartPanel.classList.remove("active");
+    }
+  });
 
-    cartItems.innerHTML += `
-      <div class="cart-item">
-        <strong>${item.name}</strong>
+  /* =====================
+     ADD TO CART
+  ===================== */
+  window.addToCart = function (name, price) {
+    const existing = cart.find(item => item.name === name);
+
+    if (existing) {
+      existing.qty++;
+    } else {
+      cart.push({ name, price, qty: 1 });
+    }
+
+    updateCart();
+    cartPanel.classList.add("active"); // auto open cart
+  };
+
+  /* =====================
+     QUANTITY CONTROLS
+  ===================== */
+  window.increaseQty = function (index) {
+    cart[index].qty++;
+    updateCart();
+  };
+
+  window.decreaseQty = function (index) {
+    cart[index].qty--;
+    if (cart[index].qty <= 0) {
+      cart.splice(index, 1);
+    }
+    updateCart();
+  };
+
+  /* =====================
+     REMOVE ITEM (TRASH)
+  ===================== */
+  window.removeItem = function (index) {
+    cart.splice(index, 1);
+    updateCart();
+  };
+
+  /* =====================
+     UPDATE CART UI
+  ===================== */
+  function updateCart() {
+    cartItems.innerHTML = "";
+    let total = 0;
+    let count = 0;
+
+    cart.forEach((item, index) => {
+      total += item.price * item.qty;
+      count += item.qty;
+
+      const div = document.createElement("div");
+      div.className = "cart-item";
+
+      div.innerHTML = `
+        <span class="cart-item-name">${item.name}</span>
+
         <div class="cart-controls">
-          <button onclick="changeQty(${index}, -1)">➖</button>
-          <span>${item.qty}</span>
-          <button onclick="changeQty(${index}, 1)">➕</button>
-          <button class="remove-btn" onclick="removeItem(${index})">🗑</button>
+          <button type="button" onclick="decreaseQty(${index})">−</button>
+          <strong>${item.qty}</strong>
+          <button type="button" onclick="increaseQty(${index})">+</button>
         </div>
-      </div>
-    `;
-  });
 
-  cartTotal.textContent = total;
-  cartCount.textContent = count;
-}
+        <button
+          type="button"
+          class="cart-trash"
+          onclick="removeItem(${index})"
+          aria-label="Eliminar producto"
+        >
+          🗑
+        </button>
+      `;
 
-function changeQty(index, amount) {
-  cart[index].qty += amount;
-  if (cart[index].qty <= 0) cart.splice(index, 1);
-  saveCart();
-  updateCart();
-}
-
-function removeItem(index) {
-  cart.splice(index, 1);
-  saveCart();
-  updateCart();
-}
-
-function toggleCart() {
-  document.getElementById("cart-panel").classList.toggle("active");
-}
-
-function saveCart() {
-  localStorage.setItem("cart", JSON.stringify(cart));
-}
-
-async function sendOrderEmail() {
-  if (cart.length === 0) {
-    alert("El carrito está vacío");
-    return;
-  }
-
-  const name = document.getElementById("customer-name").value.trim();
-  const phone = document.getElementById("customer-phone").value.trim();
-  const messageBox = document.getElementById("cart-message");
-
-  if (!name || !phone) {
-    alert("Por favor ingresa tu nombre y teléfono");
-    return;
-  }
-
-  let orderText = `Nombre: ${name}\nTeléfono: ${phone}\n\nPedido:\n`;
-  let total = 0;
-
-  cart.forEach(item => {
-    orderText += `• ${item.name} x${item.qty} = L. ${item.price * item.qty}\n`;
-    total += item.price * item.qty;
-  });
-
-  orderText += `\nTotal: L. ${total}`;
-
-  try {
-    const response = await fetch("https://formspree.io/f/mblznzyy", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: name,
-        phone: phone,
-        message: orderText
-      })
+      cartItems.appendChild(div);
     });
 
-    if (response.ok) {
-      cart = [];
-      saveCart();
-      updateCart();
+    cartTotal.textContent = total.toFixed(2);
+    cartCount.textContent = count;
 
-      document.getElementById("customer-name").value = "";
-      document.getElementById("customer-phone").value = "";
-
-      messageBox.style.display = "block";
-      setTimeout(() => messageBox.style.display = "none", 4000);
-    } else {
-      alert("Error al enviar el pedido");
-    }
-  } catch (err) {
-    alert("Error de conexión");
+    orderDetails.value =
+      cart.map(i => `${i.name} x${i.qty} – L.${(i.price * i.qty).toFixed(2)}`).join("\n") +
+      `\nTotal: L.${total.toFixed(2)}`;
   }
-}
+
+  /* =====================
+     SEND ORDER (FORMSPREE)
+  ===================== */
+  if (orderForm) {
+    orderForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      if (cart.length === 0) {
+        alert("Tu carrito está vacío.");
+        return;
+      }
+
+      const data = new FormData(orderForm);
+
+      try {
+        const response = await fetch(orderForm.action, {
+          method: "POST",
+          body: data,
+          headers: { "Accept": "application/json" }
+        });
+
+        if (response.ok) {
+          orderForm.reset();
+          cart = [];
+          updateCart();
+
+          orderForm.style.display = "none";
+          successMsg.style.display = "block";
+        } else {
+          alert("Error al enviar la orden.");
+        }
+      } catch {
+        alert("Error de conexión.");
+      }
+    });
+  }
+});
 
