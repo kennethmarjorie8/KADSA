@@ -163,6 +163,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateCart();
     cartPanel.classList.add("active"); // auto open cart
+    showCartMessage(name);
+
   };
 
   /* =====================
@@ -276,3 +278,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+
+function showCartMessage(productName = "") {
+  const msg = document.getElementById("cart-message");
+
+  if (!msg) return;
+
+  msg.textContent = productName
+    ? `🛒 ${productName} agregado al carrito`
+    : "🛒 Producto agregado al carrito";
+
+  msg.classList.add("show");
+
+  setTimeout(() => {
+    msg.classList.remove("show");
+  }, 2300);
+}
