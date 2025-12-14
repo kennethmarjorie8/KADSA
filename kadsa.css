@@ -519,7 +519,6 @@
         bottom: 20px;
         left: 20px;
         background: #d4af37;
-        /* website gold */
         color: #000;
         padding: 12px 16px;
         border-radius: 50px;
@@ -529,12 +528,11 @@
         display: flex;
         align-items: center;
         gap: 6px;
-        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 0 10px rgba(0, 0, 0, .3);
     }
 
     .cart-icon:hover {
-        box-shadow: 0px 0px 14px 2px rgba(230, 200, 74, 0.38);
-        transition: 0.3s;
+        box-shadow: 0 0 14px 2px rgba(230, 200, 74, .38);
         transform: scale(1.07);
     }
 
@@ -551,10 +549,11 @@
         right: -420px;
         width: 360px;
         height: 100vh;
-        background: #ffffff;
-        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.2);
-        transition: right 0.35s ease;
+        background: #fff;
+        box-shadow: -4px 0 20px rgba(0, 0, 0, .2);
+        transition: right .35s ease;
         z-index: 10000;
+
         display: flex;
         flex-direction: column;
     }
@@ -582,167 +581,19 @@
     }
 
     /* =====================================================
-   CART ITEMS LIST
-===================================================== */
-    #cart-items {
-        flex: 1;
-        padding: 16px;
-        overflow-y: auto;
-    }
-
-    /* =====================================================
-   CART ITEM (CLEAN & FINAL)
-===================================================== */
-    .cart-item {
-        display: grid;
-        grid-template-columns: 1fr auto auto;
-        align-items: center;
-        gap: 12px;
-        padding: 10px 0;
-        border-bottom: 1px solid #eee;
-    }
-
-    /* Product name */
-    .cart-item-name {
-        color: #000;
-        font-size: 0.95rem;
-        font-weight: 500;
-    }
-
-    /* =====================================================
-   + / − CONTROLS (EXCEPTION SAFE)
-===================================================== */
-    .cart-controls {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    /* + and − buttons */
-    .cart-controls button {
-        width: 26px;
-        height: 26px;
-        border-radius: 50%;
-        border: none;
-        background: #f2d36b;
-        color: #000;
-        font-size: 18px;
-        font-weight: bold;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    /* Quantity number (CENTERED) */
-    .cart-controls strong {
-        width: 24px;
-        text-align: center;
-        font-size: 15px;
-        font-weight: 600;
-        color: #000;
-    }
-
-    /* =====================================================
-   TRASH ICON
-===================================================== */
-    .cart-trash {
-        background: none;
-        border: none;
-        font-size: 1.1rem;
-        cursor: pointer;
-        color: #8b0000;
-        transition: transform 0.2s ease, opacity 0.2s ease;
-    }
-
-    .cart-trash:hover {
-        transform: scale(1.15);
-        opacity: 0.8;
-    }
-
-    /* =====================================================
-   CART FOOTER
-===================================================== */
-    .cart-footer {
-        padding: 16px;
-        border-top: 1px solid #ddd;
-    }
-
-    .cart-total {
-        font-weight: bold;
-        margin-bottom: 12px;
-        color: #000;
-    }
-
-    /* =====================================================
-   ORDER FORM
+   ORDER FORM (MAIN LAYOUT)
 ===================================================== */
     #order-form {
+        flex: 1;
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        min-height: 0;
+        /* 🔥 clave */
     }
-
-    #order-form input {
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-    }
-
-    /* Submit button */
-    .send-order {
-        background: #d4af37;
-        color: #000;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-        font-weight: bold;
-    }
-
-    .send-order:hover {
-        opacity: 0.9;
-    }
-
-    /* ================================
-   ORDER SUCCESS MESSAGE – CENTERED
-================================ */
-    #order-success {
-        display: none;
-        margin-top: 16px;
-        text-align: center;
-        /* center text */
-        font-size: 15px;
-        font-weight: 600;
-        color: #2e7d32;
-        /* elegant success green */
-        padding: 12px;
-        border-radius: 8px;
-        background: #eaf7ea;
-        /* soft green background */
-    }
-
 
     /* =====================================================
-   ADD TO CART BUTTON (PRODUCTS)
+   CUSTOMER INFO
 ===================================================== */
-    .add-to-cart {
-        margin-top: 8px;
-        padding: 8px 12px;
-        background: #d4af37;
-        border: none;
-        cursor: pointer;
-        font-size: 14px;
-        border-radius: 15px;
-    }
-
-    .add-to-cart:hover {
-        opacity: 0.9;
-    }
-
-    /* ================================
-   CUSTOMER INFO (TOP OF CART)
-================================ */
     .customer-info {
         padding: 12px 16px;
         border-bottom: 1px solid #e5e5e5;
@@ -758,42 +609,165 @@
         font-size: 14px;
     }
 
-    /* ================================
-   SEND ORDER BUTTON – CENTERED
-================================ */
-    .send-order {
-        margin: 16px auto 0;
-        /* top | left-right | bottom */
-        padding: 12px 20px;
-        width: calc(100% - 32px);
-        /* keeps padding from edges */
-        max-width: 280px;
-        /* prevents oversized button */
-        border-radius: 30px;
+    /* =====================================================
+   CART ITEMS (SCROLL AREA)
+===================================================== */
+    #cart-items {
+        flex: 1;
+        padding: 16px;
+        overflow-y: auto;
+        min-height: 0;
+    }
+
+    /* =====================================================
+   CART ITEM
+===================================================== */
+    .cart-item {
+        display: grid;
+        grid-template-columns: 1fr auto auto;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .cart-item-name {
+        font-size: .95rem;
+        font-weight: 500;
+        color: #000;
+    }
+
+    /* =====================================================
+   + / − CONTROLS
+===================================================== */
+    .cart-controls {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .cart-controls button {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        border: none;
+        background: #f2d36b;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .cart-controls strong {
+        width: 24px;
         text-align: center;
-        display: block;
         font-size: 15px;
         font-weight: 600;
-        background: #d4af37;
-        color: #000;
-        cursor: pointer;
-        border: none;
     }
 
-    .send-order:hover {
-        opacity: 0.9;
+    /* =====================================================
+   TRASH
+===================================================== */
+    .cart-trash {
+        background: none;
+        border: none;
+        font-size: 1.1rem;
+        cursor: pointer;
+        color: #8b0000;
+    }
+
+    .cart-trash:hover {
+        transform: scale(1.15);
     }
 
     /* ================================
-   CART TOTAL – CENTERED
+   CART TOTAL – ALWAYS VISIBLE & BLACK
 ================================ */
     .cart-total {
+        margin-top: auto;
+        padding: 12px 16px 6px;
         text-align: center;
         font-size: 16px;
         font-weight: 600;
-        margin: 12px 0;
-        color: #000;
+        color: #000 !important;
+        /* FORCE black text */
+        background: #fff;
+        /* White background */
+        position: sticky;
+        /* Stays above the bottom button */
+        bottom: 68px;
+        /* Space for "Enviar Orden" button */
+        z-index: 2;
     }
+
+    .cart-controls strong {
+        width: 24px;
+        text-align: center;
+        font-size: 15px;
+        font-weight: 600;
+        color: #000 !important;
+        /* FORCE black numbers */
+    }
+
+
+
+    /* =====================================================
+   SEND ORDER BUTTON (FIXED BOTTOM)
+===================================================== */
+    .send-order {
+        margin: 0 auto 16px;
+        width: calc(100% - 32px);
+        max-width: 280px;
+        padding: 12px 20px;
+        border-radius: 30px;
+        background: #d4af37;
+        color: #000;
+        font-size: 15px;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+
+        position: sticky;
+        bottom: 12px;
+        z-index: 3;
+    }
+
+    .send-order:hover {
+        opacity: .9;
+    }
+
+    /* =====================================================
+   SUCCESS MESSAGE
+===================================================== */
+    #order-success {
+        display: none;
+        margin: 16px;
+        text-align: center;
+        font-weight: 600;
+        color: #2e7d32;
+        background: #eaf7ea;
+        padding: 12px;
+        border-radius: 8px;
+    }
+
+    /* =====================================================
+   ADD TO CART BUTTON
+===================================================== */
+    .add-to-cart {
+        margin-top: 8px;
+        padding: 8px 12px;
+        background: #d4af37;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 15px;
+        box-shadow: 0 3px 9px rgba(0, 0, 0, 0.2);
+    }
+
+    .add-to-cart:hover {
+        box-shadow: 0 0 14px 2px rgba(230, 200, 74, .38);
+        transform: scale(1.05);
+    }
+
 
 }
 
@@ -1301,7 +1275,6 @@
         bottom: 20px;
         left: 20px;
         background: #d4af37;
-        /* website gold */
         color: #000;
         padding: 12px 16px;
         border-radius: 50px;
@@ -1311,12 +1284,11 @@
         display: flex;
         align-items: center;
         gap: 6px;
-        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 0 10px rgba(0, 0, 0, .3);
     }
 
     .cart-icon:hover {
-        box-shadow: 0px 0px 14px 2px rgba(230, 200, 74, 0.38);
-        transition: 0.3s;
+        box-shadow: 0 0 14px 2px rgba(230, 200, 74, .38);
         transform: scale(1.07);
     }
 
@@ -1333,10 +1305,11 @@
         right: -420px;
         width: 360px;
         height: 100vh;
-        background: #ffffff;
-        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.2);
-        transition: right 0.35s ease;
+        background: #fff;
+        box-shadow: -4px 0 20px rgba(0, 0, 0, .2);
+        transition: right .35s ease;
         z-index: 10000;
+
         display: flex;
         flex-direction: column;
     }
@@ -1364,167 +1337,19 @@
     }
 
     /* =====================================================
-   CART ITEMS LIST
-===================================================== */
-    #cart-items {
-        flex: 1;
-        padding: 16px;
-        overflow-y: auto;
-    }
-
-    /* =====================================================
-   CART ITEM (CLEAN & FINAL)
-===================================================== */
-    .cart-item {
-        display: grid;
-        grid-template-columns: 1fr auto auto;
-        align-items: center;
-        gap: 12px;
-        padding: 10px 0;
-        border-bottom: 1px solid #eee;
-    }
-
-    /* Product name */
-    .cart-item-name {
-        color: #000;
-        font-size: 0.95rem;
-        font-weight: 500;
-    }
-
-    /* =====================================================
-   + / − CONTROLS (EXCEPTION SAFE)
-===================================================== */
-    .cart-controls {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    /* + and − buttons */
-    .cart-controls button {
-        width: 26px;
-        height: 26px;
-        border-radius: 50%;
-        border: none;
-        background: #f2d36b;
-        color: #000;
-        font-size: 18px;
-        font-weight: bold;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    /* Quantity number (CENTERED) */
-    .cart-controls strong {
-        width: 24px;
-        text-align: center;
-        font-size: 15px;
-        font-weight: 600;
-        color: #000;
-    }
-
-    /* =====================================================
-   TRASH ICON
-===================================================== */
-    .cart-trash {
-        background: none;
-        border: none;
-        font-size: 1.1rem;
-        cursor: pointer;
-        color: #8b0000;
-        transition: transform 0.2s ease, opacity 0.2s ease;
-    }
-
-    .cart-trash:hover {
-        transform: scale(1.15);
-        opacity: 0.8;
-    }
-
-    /* =====================================================
-   CART FOOTER
-===================================================== */
-    .cart-footer {
-        padding: 16px;
-        border-top: 1px solid #ddd;
-    }
-
-    .cart-total {
-        font-weight: bold;
-        margin-bottom: 12px;
-        color: #000;
-    }
-
-    /* =====================================================
-   ORDER FORM
+   ORDER FORM (MAIN LAYOUT)
 ===================================================== */
     #order-form {
+        flex: 1;
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        min-height: 0;
+        /* 🔥 clave */
     }
-
-    #order-form input {
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-    }
-
-    /* Submit button */
-    .send-order {
-        background: #d4af37;
-        color: #000;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-        font-weight: bold;
-    }
-
-    .send-order:hover {
-        opacity: 0.9;
-    }
-
-    /* ================================
-   ORDER SUCCESS MESSAGE – CENTERED
-================================ */
-    #order-success {
-        display: none;
-        margin-top: 16px;
-        text-align: center;
-        /* center text */
-        font-size: 15px;
-        font-weight: 600;
-        color: #2e7d32;
-        /* elegant success green */
-        padding: 12px;
-        border-radius: 8px;
-        background: #eaf7ea;
-        /* soft green background */
-    }
-
 
     /* =====================================================
-   ADD TO CART BUTTON (PRODUCTS)
+   CUSTOMER INFO
 ===================================================== */
-    .add-to-cart {
-        margin-top: 8px;
-        padding: 8px 12px;
-        background: #d4af37;
-        border: none;
-        cursor: pointer;
-        font-size: 14px;
-        border-radius: 15px;
-    }
-
-    .add-to-cart:hover {
-        opacity: 0.9;
-    }
-
-    /* ================================
-   CUSTOMER INFO (TOP OF CART)
-================================ */
     .customer-info {
         padding: 12px 16px;
         border-bottom: 1px solid #e5e5e5;
@@ -1540,41 +1365,163 @@
         font-size: 14px;
     }
 
-    /* ================================
-   SEND ORDER BUTTON – CENTERED
-================================ */
-    .send-order {
-        margin: 16px auto 0;
-        /* top | left-right | bottom */
-        padding: 12px 20px;
-        width: calc(100% - 32px);
-        /* keeps padding from edges */
-        max-width: 280px;
-        /* prevents oversized button */
-        border-radius: 30px;
+    /* =====================================================
+   CART ITEMS (SCROLL AREA)
+===================================================== */
+    #cart-items {
+        flex: 1;
+        padding: 16px;
+        overflow-y: auto;
+        min-height: 0;
+    }
+
+    /* =====================================================
+   CART ITEM
+===================================================== */
+    .cart-item {
+        display: grid;
+        grid-template-columns: 1fr auto auto;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .cart-item-name {
+        font-size: .95rem;
+        font-weight: 500;
+        color: #000;
+    }
+
+    /* =====================================================
+   + / − CONTROLS
+===================================================== */
+    .cart-controls {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .cart-controls button {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        border: none;
+        background: #f2d36b;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .cart-controls strong {
+        width: 24px;
         text-align: center;
-        display: block;
         font-size: 15px;
         font-weight: 600;
-        background: #d4af37;
-        color: #000;
-        cursor: pointer;
-        border: none;
     }
 
-    .send-order:hover {
-        opacity: 0.9;
+    /* =====================================================
+   TRASH
+===================================================== */
+    .cart-trash {
+        background: none;
+        border: none;
+        font-size: 1.1rem;
+        cursor: pointer;
+        color: #8b0000;
+    }
+
+    .cart-trash:hover {
+        transform: scale(1.15);
     }
 
     /* ================================
-   CART TOTAL – CENTERED
+   CART TOTAL – ALWAYS VISIBLE & BLACK
 ================================ */
     .cart-total {
+        margin-top: auto;
+        padding: 12px 16px 6px;
         text-align: center;
         font-size: 16px;
         font-weight: 600;
-        margin: 12px 0;
+        color: #000 !important;
+        /* FORCE black text */
+        background: #fff;
+        /* White background */
+        position: sticky;
+        /* Stays above the bottom button */
+        bottom: 68px;
+        /* Space for "Enviar Orden" button */
+        z-index: 2;
+    }
+
+    .cart-controls strong {
+        width: 24px;
+        text-align: center;
+        font-size: 15px;
+        font-weight: 600;
+        color: #000 !important;
+        /* FORCE black numbers */
+    }
+
+
+
+    /* =====================================================
+   SEND ORDER BUTTON (FIXED BOTTOM)
+===================================================== */
+    .send-order {
+        margin: 0 auto 16px;
+        width: calc(100% - 32px);
+        max-width: 280px;
+        padding: 12px 20px;
+        border-radius: 30px;
+        background: #d4af37;
         color: #000;
+        font-size: 15px;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+
+        position: sticky;
+        bottom: 12px;
+        z-index: 3;
+    }
+
+    .send-order:hover {
+        opacity: .9;
+    }
+
+    /* =====================================================
+   SUCCESS MESSAGE
+===================================================== */
+    #order-success {
+        display: none;
+        margin: 16px;
+        text-align: center;
+        font-weight: 600;
+        color: #2e7d32;
+        background: #eaf7ea;
+        padding: 12px;
+        border-radius: 8px;
+    }
+
+    /* =====================================================
+   ADD TO CART BUTTON
+===================================================== */
+    .add-to-cart {
+        margin-top: 8px;
+        padding: 8px 12px;
+        background: #d4af37;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 15px;
+        box-shadow: 0 3px 9px rgba(0, 0, 0, 0.2);
+    }
+
+    .add-to-cart:hover {
+        box-shadow: 0 0 14px 2px rgba(230, 200, 74, .38);
+        transform: scale(1.05);
     }
 
 }
@@ -2116,7 +2063,6 @@
         bottom: 20px;
         left: 20px;
         background: #d4af37;
-        /* website gold */
         color: #000;
         padding: 12px 16px;
         border-radius: 50px;
@@ -2126,12 +2072,11 @@
         display: flex;
         align-items: center;
         gap: 6px;
-        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 0 10px rgba(0, 0, 0, .3);
     }
 
     .cart-icon:hover {
-        box-shadow: 0px 0px 14px 2px rgba(230, 200, 74, 0.38);
-        transition: 0.3s;
+        box-shadow: 0 0 14px 2px rgba(230, 200, 74, .38);
         transform: scale(1.07);
     }
 
@@ -2148,10 +2093,11 @@
         right: -420px;
         width: 360px;
         height: 100vh;
-        background: #ffffff;
-        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.2);
-        transition: right 0.35s ease;
+        background: #fff;
+        box-shadow: -4px 0 20px rgba(0, 0, 0, .2);
+        transition: right .35s ease;
         z-index: 10000;
+
         display: flex;
         flex-direction: column;
     }
@@ -2179,167 +2125,19 @@
     }
 
     /* =====================================================
-   CART ITEMS LIST
-===================================================== */
-    #cart-items {
-        flex: 1;
-        padding: 16px;
-        overflow-y: auto;
-    }
-
-    /* =====================================================
-   CART ITEM (CLEAN & FINAL)
-===================================================== */
-    .cart-item {
-        display: grid;
-        grid-template-columns: 1fr auto auto;
-        align-items: center;
-        gap: 12px;
-        padding: 10px 0;
-        border-bottom: 1px solid #eee;
-    }
-
-    /* Product name */
-    .cart-item-name {
-        color: #000;
-        font-size: 0.95rem;
-        font-weight: 500;
-    }
-
-    /* =====================================================
-   + / − CONTROLS (EXCEPTION SAFE)
-===================================================== */
-    .cart-controls {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    /* + and − buttons */
-    .cart-controls button {
-        width: 26px;
-        height: 26px;
-        border-radius: 50%;
-        border: none;
-        background: #f2d36b;
-        color: #000;
-        font-size: 18px;
-        font-weight: bold;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    /* Quantity number (CENTERED) */
-    .cart-controls strong {
-        width: 24px;
-        text-align: center;
-        font-size: 15px;
-        font-weight: 600;
-        color: #000;
-    }
-
-    /* =====================================================
-   TRASH ICON
-===================================================== */
-    .cart-trash {
-        background: none;
-        border: none;
-        font-size: 1.1rem;
-        cursor: pointer;
-        color: #8b0000;
-        transition: transform 0.2s ease, opacity 0.2s ease;
-    }
-
-    .cart-trash:hover {
-        transform: scale(1.15);
-        opacity: 0.8;
-    }
-
-    /* =====================================================
-   CART FOOTER
-===================================================== */
-    .cart-footer {
-        padding: 16px;
-        border-top: 1px solid #ddd;
-    }
-
-    .cart-total {
-        font-weight: bold;
-        margin-bottom: 12px;
-        color: #000;
-    }
-
-    /* =====================================================
-   ORDER FORM
+   ORDER FORM (MAIN LAYOUT)
 ===================================================== */
     #order-form {
+        flex: 1;
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        min-height: 0;
+        /* 🔥 clave */
     }
-
-    #order-form input {
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-    }
-
-    /* Submit button */
-    .send-order {
-        background: #d4af37;
-        color: #000;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-        font-weight: bold;
-    }
-
-    .send-order:hover {
-        opacity: 0.9;
-    }
-
-    /* ================================
-   ORDER SUCCESS MESSAGE – CENTERED
-================================ */
-    #order-success {
-        display: none;
-        margin-top: 16px;
-        text-align: center;
-        /* center text */
-        font-size: 15px;
-        font-weight: 600;
-        color: #2e7d32;
-        /* elegant success green */
-        padding: 12px;
-        border-radius: 8px;
-        background: #eaf7ea;
-        /* soft green background */
-    }
-
 
     /* =====================================================
-   ADD TO CART BUTTON (PRODUCTS)
+   CUSTOMER INFO
 ===================================================== */
-    .add-to-cart {
-        margin-top: 8px;
-        padding: 8px 12px;
-        background: #d4af37;
-        border: none;
-        cursor: pointer;
-        font-size: 14px;
-        border-radius: 15px;
-    }
-
-    .add-to-cart:hover {
-        opacity: 0.9;
-    }
-
-    /* ================================
-   CUSTOMER INFO (TOP OF CART)
-================================ */
     .customer-info {
         padding: 12px 16px;
         border-bottom: 1px solid #e5e5e5;
@@ -2355,41 +2153,163 @@
         font-size: 14px;
     }
 
-    /* ================================
-   SEND ORDER BUTTON – CENTERED
-================================ */
-    .send-order {
-        margin: 16px auto 0;
-        /* top | left-right | bottom */
-        padding: 12px 20px;
-        width: calc(100% - 32px);
-        /* keeps padding from edges */
-        max-width: 280px;
-        /* prevents oversized button */
-        border-radius: 30px;
+    /* =====================================================
+   CART ITEMS (SCROLL AREA)
+===================================================== */
+    #cart-items {
+        flex: 1;
+        padding: 16px;
+        overflow-y: auto;
+        min-height: 0;
+    }
+
+    /* =====================================================
+   CART ITEM
+===================================================== */
+    .cart-item {
+        display: grid;
+        grid-template-columns: 1fr auto auto;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .cart-item-name {
+        font-size: .95rem;
+        font-weight: 500;
+        color: #000;
+    }
+
+    /* =====================================================
+   + / − CONTROLS
+===================================================== */
+    .cart-controls {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .cart-controls button {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        border: none;
+        background: #f2d36b;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .cart-controls strong {
+        width: 24px;
         text-align: center;
-        display: block;
         font-size: 15px;
         font-weight: 600;
-        background: #d4af37;
-        color: #000;
-        cursor: pointer;
-        border: none;
     }
 
-    .send-order:hover {
-        opacity: 0.9;
+    /* =====================================================
+   TRASH
+===================================================== */
+    .cart-trash {
+        background: none;
+        border: none;
+        font-size: 1.1rem;
+        cursor: pointer;
+        color: #8b0000;
+    }
+
+    .cart-trash:hover {
+        transform: scale(1.15);
     }
 
     /* ================================
-   CART TOTAL – CENTERED
+   CART TOTAL – ALWAYS VISIBLE & BLACK
 ================================ */
     .cart-total {
+        margin-top: auto;
+        padding: 12px 16px 6px;
         text-align: center;
         font-size: 16px;
         font-weight: 600;
-        margin: 12px 0;
+        color: #000 !important;
+        /* FORCE black text */
+        background: #fff;
+        /* White background */
+        position: sticky;
+        /* Stays above the bottom button */
+        bottom: 68px;
+        /* Space for "Enviar Orden" button */
+        z-index: 2;
+    }
+
+    .cart-controls strong {
+        width: 24px;
+        text-align: center;
+        font-size: 15px;
+        font-weight: 600;
+        color: #000 !important;
+        /* FORCE black numbers */
+    }
+
+
+
+    /* =====================================================
+   SEND ORDER BUTTON (FIXED BOTTOM)
+===================================================== */
+    .send-order {
+        margin: 0 auto 16px;
+        width: calc(100% - 32px);
+        max-width: 280px;
+        padding: 12px 20px;
+        border-radius: 30px;
+        background: #d4af37;
         color: #000;
+        font-size: 15px;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+
+        position: sticky;
+        bottom: 12px;
+        z-index: 3;
+    }
+
+    .send-order:hover {
+        opacity: .9;
+    }
+
+    /* =====================================================
+   SUCCESS MESSAGE
+===================================================== */
+    #order-success {
+        display: none;
+        margin: 16px;
+        text-align: center;
+        font-weight: 600;
+        color: #2e7d32;
+        background: #eaf7ea;
+        padding: 12px;
+        border-radius: 8px;
+    }
+
+    /* =====================================================
+   ADD TO CART BUTTON
+===================================================== */
+    .add-to-cart {
+        margin-top: 8px;
+        padding: 8px 12px;
+        background: #d4af37;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 15px;
+        box-shadow: 0 3px 9px rgba(0, 0, 0, 0.2);
+    }
+
+    .add-to-cart:hover {
+        box-shadow: 0 0 14px 2px rgba(230, 200, 74, .38);
+        transform: scale(1.05);
     }
 
 }
