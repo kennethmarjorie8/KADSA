@@ -278,7 +278,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-
+/* ========================================================== */
+/* pop-up */
 function showCartMessage(productName = "") {
   const msg = document.getElementById("cart-message");
 
