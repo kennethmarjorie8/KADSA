@@ -698,6 +698,7 @@
         bottom: 68px;
         /* Space for "Enviar Orden" button */
         z-index: 2;
+        border-top: 1px solid #e5e5e5;
     }
 
     .cart-controls strong {
@@ -1490,6 +1491,7 @@
         bottom: 68px;
         /* Space for "Enviar Orden" button */
         z-index: 2;
+        border-top: 1px solid #e5e5e5;
     }
 
     .cart-controls strong {
@@ -2316,6 +2318,7 @@
         bottom: 68px;
         /* Space for "Enviar Orden" button */
         z-index: 2;
+        border-top: 1px solid #e5e5e5;
     }
 
     .cart-controls strong {
