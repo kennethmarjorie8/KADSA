@@ -413,7 +413,7 @@
         position: sticky;
         top: 0;
         z-index: 999;
-        box-shadow: 0 8px 8px 0px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 8px 8px 0px rgba(0, 0, 0, 0.3);
         height: 60px;
     }
 
@@ -1232,7 +1232,7 @@
         justify-content: space-between;
         height: 60px;
         align-items: center;
-        box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.4);
+        box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.3);
     }
 
     .header-section>a {
@@ -2033,7 +2033,7 @@
         position: sticky;
         top: 0;
         z-index: 999;
-        box-shadow: 0 8px 8px 0px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 8px 8px 0px rgba(0, 0, 0, 0.3);
         height: 60px;
     }
 
